@@ -134,7 +134,7 @@ def render_to_pdf(template, context, using=None, request=None, encoding="utf-8",
 
     :raises: :exc:`~easy_pdf.exceptions.PDFRenderingError`, :exc:`~easy_pdf.exceptions.UnsupportedMediaPathException`
     """
-    content = loader.render_to_string(template, context, request=request, using=using)
+    content = loader.render_to_string(template, context)
     return html_to_pdf(content, encoding, **kwargs)
 
 
